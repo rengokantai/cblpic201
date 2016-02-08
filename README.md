@@ -55,3 +55,19 @@ lsof -> list all open files
 ```
 lsof | grep stress
 ```
+
+- 04
+monitering network io
+netstat
+```
+netstat -ie  //interfaces
+netstat -s //stats
+netstat -tuna //useful info
+```
+
+other tools
+```
+sudo apt-get install iftop nload
+```
+iftop ->realtime monitering
+nload ->interactive network monitering
