@@ -71,3 +71,82 @@ sudo apt-get install iftop nload
 ```
 iftop ->realtime monitering
 nload ->interactive network monitering
+
+- 5
+bandwidth measuring iperf and speedtest
+```
+iperf -s //test server speed
+iperf -c 192.168.1.1 //test client speed
+```
+
+- 6
+moniter data trend
+```
+sudo apt-get install collectd
+```
+edit 
+```
+vim /etc/collectd/collectd.conf
+```
+uncomment network
+and enable cgi
+```
+sudo a2emod cgi
+sudo serviceapache2 restart
+```
+
+check
+```
+cd /usr/lib/cgi-bin
+```
+```
+sudo apt-get install liberrds-perl libjson-perl libhtml-parser-perl
+```
+not finished.  
+- 07
+kernel components
+- 08 manipulate kernel modules
+```
+uname -r
+```
+
+list all modules in system
+```
+cd /lib/modules
+ls
+```
+go to folder of kernel folder:
+```
+ls kernel/
+```
+
+list system prop
+```
+lsmod
+```
+
+remove a kernel module
+```
+rmmod floppy
+```
+inspect a module to identify whether it exits
+```
+insmod floppy
+```
+
+find the folder of folder floppy
+```
+find . | grep floppy
+```
+
+Advanced commands
+```
+modprobe -r floppy
+modprobe floppy
+depmod -a
+modinfo lp
+```
+
+
+
+
