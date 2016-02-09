@@ -148,5 +148,21 @@ modinfo lp
 ```
 
 
+- 09
+kernel automation
+```
+cd /etc/sysctl.d
+cat /etc/sysctl.conf
+```
 
+show all current settings
+```
+sysctl -a 
+```
+change prop:
+```
+sysctl -w prop=newvalue
+```
+
+7:03,
 
